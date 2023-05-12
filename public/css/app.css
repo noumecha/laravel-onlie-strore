@@ -1,0 +1,33 @@
+/*font family */
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+
+/*code ressource*/
+.bg-secondary {
+    background-color: #0B0C0C !important;
+}
+.footer {
+    background-color: black!important;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.footer .footer-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer .copyright {
+    padding: 20px 0 20px 0;
+}
+.bg-primary {
+    background-color: #04BF37 !important;
+}
+nav {
+    font-weight: 700;
+}
+.img-card {
+    height: 18vw;
+    object-fit: cover;
+}
