@@ -5,12 +5,10 @@
 .bg-secondary {
     background-color: #0B0C0C !important;
 }
+/** footer */
 .footer {
     background-color: black!important;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    position: relative;
 }
 .footer .footer-section {
     display: flex;
@@ -21,6 +19,11 @@
 .footer .copyright {
     padding: 20px 0 20px 0;
 }
+/* contnent container */
+.content {
+    position: relative;
+}
+/* some surcharges */
 .bg-primary {
     background-color: #04BF37 !important;
 }
@@ -30,4 +33,5 @@ nav {
 .img-card {
     height: 18vw;
     object-fit: cover;
+    position: relative;
 }

@@ -11,14 +11,14 @@
     <!-- head -->
     <nav class="navbar navbar-exapand-lg navbar-dark bg-secondary py-4">
         <div class="container">
-            <a href="#" class="nav-link text-white navbar-band">Online Store</a>
+            <a href="{{ route('home.index') }}" class="nav-link text-white navbar-band">Online Store</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
-                    <a href="#" class="nav-link active">Home</a>
-                    <a href="#" class="nav-link active">About</a>
+                    <a href="{{ route('home.index') }}" class="nav-link active">Home</a>
+                    <a href="{{ route('home.about') }}" class="nav-link active">About</a>
                 </div>
             </div>
         </div>
@@ -31,7 +31,7 @@
     </header>
     <!-- head -->
 
-    <div class="container my-4">
+    <div class="container content my-4">
         @yield('content')
     </div>
 
