@@ -35,3 +35,7 @@ nav {
     object-fit: cover;
     position: relative;
 }
+.img-fluid {
+    height: 420px !important;
+    object-fit: cover;
+}

@@ -22,8 +22,8 @@ class ProductController extends Controller
         $product_data = [];
         //$product = ProductController::$products[$id-1];
         $product = Product::findOrFail($id);
-        $product_data['title'] = "Online Store - ".$product['name'];
-        $product_data['subtitle'] = "Product information - ".$product['name'];
+        $product_data['title'] = "Online Store - ".$product->getName();
+        $product_data['subtitle'] = "Product information - ".$product->getName();
         $product_data['product'] = $product;
         return view('product.show')->with('product_data', $product_data);
     }
