@@ -25,7 +25,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link text-white">
+                        <a href="{{ route("admin.product.index") }}" class="nav-link text-white">
                             Admin - Products
                         </a>
                     </li>
