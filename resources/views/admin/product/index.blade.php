@@ -36,18 +36,34 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="description" class="form-label">
-                            Description :
-                        </label>
-                        <textarea name="description" class="form-control">
-                            {{ old('description') }}
-                        </textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">
-                        Submit
-                    </button>
                 </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="mb-3 row">
+                            <label for="image" class="col-lg-2 col-md-6 col-sm-12 col-form-label">
+                                Image :
+                            </label>
+                            <div class="col-lg-10 col-md-6 col-sm-12">
+                                <input type="file" name="image" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">
+                        Description :
+                    </label>
+                    <textarea name="description" class="form-control">
+                        {{ old('description') }}
+                    </textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    Submit
+                </button>
+                <!-- /div -->
             </form>
         </div>
     </div>
