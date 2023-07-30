@@ -74,4 +74,12 @@ class Product extends Model
     {
         $this->attributes['updated_at'] = $updated_at;
     }
+    public static function validate($request) {
+        $request->validate([
+            "name" => "required|max:255",
+            "description" => "required",
+            "price" => "required|gt:0",
+            "image" => "image",
+        ]);
+    }
 }
