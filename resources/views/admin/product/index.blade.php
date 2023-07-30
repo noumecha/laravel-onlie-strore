@@ -88,7 +88,9 @@
                             <td>{{ $product->getName() }}</td>
                             <td>
                                 <div class="btn btn-primary">
-                                    <i class="bi-pencil"></i>
+                                    <a class="btn btn-primary" href="{{ route('admin.product.edit', ['id' => $product->getId()]) }}">
+                                        <i class="bi-pencil"></i>
+                                    </a>
                                 </div>
                             </td>
                             <td>

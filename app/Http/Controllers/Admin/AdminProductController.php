@@ -51,4 +51,41 @@ class AdminProductController extends Controller
         Product::destroy($id);
         return back();
     }
+
+    public function edit($id) {
+        $admin_data = [];
+
+        $admin_data['title'] = 'Admin Page - Edit Product - Online Store';
+        $admin_data['products'] = Product::findOrFail($id);
+
+        return view('admin.product.edit')->with('admin_data', $admin_data);
+    }
+
+    public function update(Request $request, $id) {
+        $request->validate([
+            "name" => "required|max:255",
+            "description" => "required",
+            "price" => "required|gt:0",
+            "image" => "image",
+        ]);
+
+        $product = Product::findOrFail($id);
+        $product->setName($request->input('name'));
+        $product->setDescription($request->input('description'));
+        $product->setPrice($request->input('price'));
+
+        if($request->hasFile('image')) {
+            $imageName = $product->getId().".".$request->file('image')->getExtension();
+            Storage::disk('public')->put(
+                $imageName,
+                file_get_contents($request->file('image')->getRealPath())
+            );
+            $product->setImage($imageName);
+        }
+
+        $product->save();
+        return redirect()->route('admin.product.index');
+
+    }
+
 }
