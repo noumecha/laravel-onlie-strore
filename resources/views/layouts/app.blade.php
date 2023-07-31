@@ -29,6 +29,7 @@
                             <a role="button" onclick="document.getElementById('logout').submit();" class="nav-link active">
                                 Logout
                             </a>
+                            @csrf
                         </form>
                     @endguest
                 </div>
