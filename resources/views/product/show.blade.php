@@ -16,9 +16,24 @@
                     {{ $product_data["product"]->getDescription()}}
                 </div>
                 <div class="card-text">
-                    <a class="btn btn-secondary btn-lg mt-3 text-white" href="#">
-                        Add to Cart
-                    </a>
+                    <form action="{{ route('cart.add',['id'=>$product_data['product']->getId()]) }}" method="POST">
+                        <div class="row">
+                            @csrf
+                            <div class="col-auto">
+                                <div class="input-group col-auto">
+                                    <div class="input-group-text">
+                                        Quantity
+                                    </div>
+                                    <input type="number" name="quantity" min="1" max="10" class="form-control quantity-input" value="1">
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <button type="submit" class="btn bg-primary text-white">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

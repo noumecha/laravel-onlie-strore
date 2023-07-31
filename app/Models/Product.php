@@ -82,4 +82,11 @@ class Product extends Model
             "image" => "image",
         ]);
     }
+    public static function sumPricesByQuantities($products, $productInSession) {
+        $total = 0;
+        foreach ($products as $product) {
+            $total += ($product->getPrice() * $productInSession[$product->getId()]);
+        }
+        return $total;
+    }
 }
